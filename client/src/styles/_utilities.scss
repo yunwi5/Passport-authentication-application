@@ -1,0 +1,12 @@
+.flex-center {
+    @include flex-center;
+}
+
+.btn-custom {
+    box-shadow: $shadow-light;
+    align-self: stretch;
+
+    &:hover {
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    }
+}

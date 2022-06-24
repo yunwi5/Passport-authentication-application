@@ -1,0 +1,31 @@
+Passport Google authentication profile:
+
+displayName: string
+email: string
+id: string,
+sub: string (same as id),
+name: {givenName: string, familyName: string},
+picture: string,
+photos: [{value: string, type: string}]
+provider: 'google' (fixed),
+
+
+
+Github profile:
+
+id: string
+displayName: null
+username: string
+profileUrl: string
+photos: Array<{value: string}>
+provider: 'github' (fixed),
+
+
+LinkedIn profile:
+
+id: string;
+photos: Array<{value: string}>; (get the first value which is profile pic)
+displayName: string;
+emails: Array<{value: string}>; (get the first value)
+provider: 'linkedin'; (fixed)
+

@@ -1,0 +1,11 @@
+@import '../../../styles/variables';
+
+.form-section {
+    .section-icon {
+        color: $color-slate-8;
+        font-size: 1.1em;
+    }
+    .form-label {
+        font-size: 1.1rem !important;
+    }
+}

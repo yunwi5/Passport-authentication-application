@@ -1,0 +1,3 @@
+[submodule "express-passport-auth"]
+	path = express-passport-auth
+	url = https://github.com/yunwi5/express-passport-auth.git

@@ -1,0 +1,32 @@
+@import '../../styles/variables';
+
+.user-nav {
+    display: flex;
+    gap: 5px;
+    color: $color-grey-1;
+    align-items: center;
+    padding: 0.25rem 0;
+    padding-left: 1.2rem;
+    padding-right: 0.5rem;
+    border-radius: 30rem;
+    background-color: darken($color-grey-7, 3%);
+
+    .user-nav-name {
+        font-size: 1rem;
+        margin-bottom: 0 !important;
+        margin-right: 8px;
+    }
+
+    .user-picture {
+        height: 2.1rem;
+        width: 2.1rem;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+
+.dropdown-menu {
+    min-width: 8rem !important;
+    margin-top: 6px !important;
+    transform: translateX(-6rem);
+}

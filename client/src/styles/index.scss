@@ -1,0 +1,81 @@
+@import 'variables';
+@import 'mixins';
+@import 'utilities';
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+        'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+main {
+    flex: 1;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh !important;
+}
+
+.home-main {
+    @include flex-center;
+}
+
+.home-container {
+    max-width: 35rem !important;
+    max-height: Max(70vh, 30rem) !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid $color-grey-2 !important;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.home-paragraph {
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.icon-main {
+    font-size: 10rem;
+}
+
+.home-btn {
+    align-self: stretch;
+    a:hover {
+        color: currentColor;
+    }
+}
+
+.link {
+    text-decoration: none;
+    &:hover {
+        color: $color-blue-3;
+    }
+}
+
+// @mixin flex-center {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
