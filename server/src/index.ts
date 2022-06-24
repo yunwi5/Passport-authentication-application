@@ -18,6 +18,7 @@ import {
     authGitHubRouter,
 } from './routes/auth/';
 import keys from './config/keys';
+import errorHandler from './middleware/error';
 
 // passport config
 import passportStrategy from './config/passport';
@@ -82,6 +83,9 @@ app.use('/auth/google', authGoogleRouter.default);
 app.use('/auth/facebook', authFacebookRouter.default);
 app.use('/auth/linkedin', authLinkedInRouter.default);
 app.use('/auth/github', authGitHubRouter.default);
+
+// Error handling middleware
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 

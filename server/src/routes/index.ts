@@ -1,5 +1,5 @@
 import { Request, Router, Response } from 'express';
-import authConfig from '../config/auth';
+import authConfig from '../middleware/auth';
 import keys from '../config/keys';
 
 const ensureAuthenticated = authConfig.ensureAuthenticated;

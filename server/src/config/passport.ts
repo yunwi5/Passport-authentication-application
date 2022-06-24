@@ -151,7 +151,7 @@ const passportStrategy = (passport: PassportStatic) => {
                 // console.log('profile:', profile);
                 const { id, email, sub, displayName, provider, picture } = profile;
 
-                User.findOne({ email })
+                User.findOne({ googleId: id })
                     .then((user) => {
                         if (!user) {
                             User.create(
