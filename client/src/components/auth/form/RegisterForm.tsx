@@ -71,7 +71,8 @@ const RegisterForm = () => {
                 setErrorState((ps) => ({ ...ps, password: message }));
             }
         } else if (e.target.name === RegisterName.PASSWORD_CONFIRM) {
-            const isValid = e.target.value === registerState.password;
+            const pc = e.target.value;
+            const isValid = pc.trim() && pc === registerState.password;
             if (isValid) {
                 setErrorState((ps) => ({ ...ps, passwordConfirm: null }));
             } else {
@@ -85,7 +86,10 @@ const RegisterForm = () => {
         e.preventDefault();
         // check if any field has error
         const hasError = Object.values(errorState).some((err) => !!err);
-        if (hasError) return;
+        if (hasError) {
+            console.log('form has error!');
+            return;
+        }
         const hasEmpty = Object.values(registerState).some((field) => !field);
         if (hasEmpty) {
             setErrorState({
@@ -100,7 +104,6 @@ const RegisterForm = () => {
             });
             return;
         }
-        console.log('registerState:', registerState);
         registerLocal(registerState);
         // loginLocal(loginState);
     };

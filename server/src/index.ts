@@ -43,7 +43,8 @@ mongoose
     .then(() => console.log('Connected to Mongodb!'))
     .catch((err) => console.log(err));
 
-// Bodyparser
+// Allow express to parse JSON
+app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Express Session
